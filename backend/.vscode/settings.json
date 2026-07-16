@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "terminal.integrated.cursorWidth": 1,
+    "editor.cursorWidth": 0,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorStyle": "line-thin"
+}
