@@ -60,7 +60,7 @@ const blogController = {
       return next(error);
     }
     const blogDto = new BlogDto(newBlog);
-    return res.status(200).json({ blog: blogDto });
+    return res.status(201).json({ blog: blogDto });
   },
 
   //get all
@@ -173,24 +173,22 @@ const blogController = {
     // delete comments on this blog
 
     const deleteBlogSchema = Joi.object({
-        id: Joi.string().regex(mongodbIdPattern).required()
+      id: Joi.string().regex(mongodbIdPattern).required(),
     });
 
+    const { error } = deleteBlogSchema.validate(req.params);
 
-    const {error} = deleteBlogSchema.validate(req.params);
-
-    const {id} = req.params;
+    const { id } = req.params;
 
     // delete blog
-// delete comments
-try{
-    await Blog.deleteOne({_id: id});
-    await Comment.deleteMany({ blog: id });
-}
-catch(error){
-    return next(error);
-}
-return res.status(200).json({ message: `Blog deleted!` });
+    // delete comments
+    try {
+      await Blog.deleteOne({ _id: id });
+      await Comment.deleteMany({ blog: id });
+    } catch (error) {
+      return next(error);
+    }
+    return res.status(200).json({ message: `Blog deleted!` });
   },
 };
 

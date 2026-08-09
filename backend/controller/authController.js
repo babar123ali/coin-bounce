@@ -244,6 +244,7 @@ const authController = {
     } catch (e) {
       return next(e);
     }
+    
 
     const user = await User.findOne({ _id: id });
 

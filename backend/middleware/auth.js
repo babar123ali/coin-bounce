@@ -18,7 +18,6 @@ const auth = async (req, res, next) => {
     try {
       _id = JWTservice.verifyAccessToken(accessToken)._id;
     } catch (error) {
-      
       return next(error);
     }
 

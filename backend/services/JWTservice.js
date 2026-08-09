@@ -1,5 +1,7 @@
 const jwt = require(`jsonwebtoken`);
-const { ACCESS_TOKEN_SECRET, REFRESH_TOKEN_SECRET } = require(`../config/index`);
+const { ACCESS_TOKEN_SECRET, REFRESH_TOKEN_SECRET } = require(
+  `../config/index`,
+);
 const RefreshToken = require(`../models/token`);
 
 class JWTservice {
@@ -15,6 +17,7 @@ class JWTservice {
   static verifyAccessToken(token) {
     return jwt.verify(token, ACCESS_TOKEN_SECRET);
   }
+
   // verify refresh token
   static verifyRefreshToken(token) {
     return jwt.verify(token, REFRESH_TOKEN_SECRET);
