@@ -181,7 +181,7 @@ const authController = {
     res.clearCookie(`refreshToken`);
     //response
 
-    res.status(200).json({ user: null, auth: false });
+    return res.status(200).json({ user: null, auth: false });
   },
 
   // refresh

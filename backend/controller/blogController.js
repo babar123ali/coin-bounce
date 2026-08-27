@@ -177,6 +177,9 @@ const blogController = {
     });
 
     const { error } = deleteBlogSchema.validate(req.params);
+    if(error){
+      return next(error);
+    }
 
     const { id } = req.params;
 

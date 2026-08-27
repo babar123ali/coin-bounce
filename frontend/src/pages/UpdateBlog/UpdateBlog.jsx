@@ -16,7 +16,7 @@ function UpdateBlog() {
 
     const getPhoto = (e) => {
         const file = e.target.files[0];
-        const reader = new FileReader();
+        const reader = new FileReader(); 
         reader.readAsDataURL(file);
         reader.onloadend = () => {
             setphoto(reader.result);

@@ -14,7 +14,7 @@ function Home() {
 
         //cleanup function
         setArticles([]);
-    }, [])
+    }, []) 
 
     const handleCardClick = (url) => {
         window.open(url , 'blank');

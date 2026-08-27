@@ -1,26 +1,29 @@
-.table{
+.table {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
 }
-    
-.head{
+
+.head {
     background-color: #f2f2f2;
 
 }
+
 .head th {
     font-weight: bold;
     font-size: 30px;
     align-items: center;
     padding: 10px;
 }
-.tableRow td{
+
+.tableRow td {
     border-bottom: 1px solid #f2f2f2;
     padding: 8px;
     font-size: 20px;
     text-align: center;
 }
-.logo{
+
+.logo {
     width: 30%;
     display: flex;
     align-items: center;
@@ -28,7 +31,8 @@
     text-align: left;
     margin: 0 auto;
 }
-.symbol{
+
+.symbol {
     width: 30px;
     display: flex;
     margin: 0 auto;

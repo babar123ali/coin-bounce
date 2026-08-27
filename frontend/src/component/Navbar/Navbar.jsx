@@ -36,7 +36,7 @@ function Navbar() {
                     className={({ isActive }) => isActive ? styles.activeStyle : styles.inActiveStyle}
                 >Submit a blog</NavLink>
 
-                {isAuthenticated ? <div><NavLink><button className={styles.signOutbutton} onClick={handleSignout}>Sign Out</button></NavLink></div>
+                {isAuthenticated ? <div><NavLink><button className={styles.signOutButton} onClick={handleSignout}>Sign Out</button></NavLink></div>
                     : <div>
                         <NavLink to='login'
                             className={({ isActive }) => isActive ? styles.activeStyle : styles.inActiveStyle}

@@ -69,6 +69,6 @@ function SubmitBlog() {
             >Submit</button>
         </div>
     )
-}
+};
 
 export default SubmitBlog; 

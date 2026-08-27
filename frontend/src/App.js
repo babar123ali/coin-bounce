@@ -19,7 +19,7 @@ function App() {
     <div className={styles.container}>
       <BrowserRouter>
         <div className={styles.layout}>
-          <Navbar />
+          <Navbar /> 
           <Routes>
             <Route
               path="/"
