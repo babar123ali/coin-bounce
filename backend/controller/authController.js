@@ -78,11 +78,15 @@ const authController = {
     res.cookie(`accessToken`, accessToken, {
       maxAge: 1000 * 60 * 60 * 24,
       httpOnly: true,
+      secure: true,
+      sameSite: 'none',
     });
 
     res.cookie(`refreshToken`, refreshToken, {
       maxAge: 1000 * 60 * 60 * 24,
       httpOnly: true,
+      secure: true,
+      sameSite: 'none',
     });
 
     // 5. response send
@@ -152,11 +156,15 @@ const authController = {
     res.cookie(`accessToken`, accessToken, {
       maxAge: 1000 * 60 * 60 * 24,
       httpOnly: true,
+      secure: true,
+      sameSite: 'none',
     });
 
     res.cookie(`refreshToken`, refreshToken, {
       maxAge: 1000 * 60 * 60 * 24,
       httpOnly: true,
+      secure: true,
+      sameSite: 'none',
     });
 
     const userDto = new UserDto(user);
