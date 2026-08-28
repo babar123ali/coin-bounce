@@ -11,9 +11,6 @@ function Home() {
             const response = await getNews();
             setArticles(response);
         })();
-
-        //cleanup function
-        setArticles([]);
     }, []) 
 
     const handleCardClick = (url) => {
