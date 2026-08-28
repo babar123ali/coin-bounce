@@ -40,7 +40,7 @@ function BlogDetails() {
         }
 
         getBlogDetails();
-    }, [reload]);
+    }, [reload,blogId, username]);
 
     const postCommentHandler = async () => {
         const data = {

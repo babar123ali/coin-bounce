@@ -57,7 +57,7 @@ function UpdateBlog() {
         }
 
         getBlogDetails();
-    },[]);
+    },[blogId]);
 
     return (
         <div className={styles.wrapper}>
