@@ -4,6 +4,7 @@ const authController= require(`../controller/authController`);
 const blogController = require(`../controller/blogController`);
 const commentController = require(`../controller/commentController`);
 const auth = require(`../middleware/auth`);
+const newsController = require('../controller/newsController');
 
 
 
@@ -40,5 +41,9 @@ router.post('/comment',auth, commentController.create);
 
 //read comments by blog id
 router.get('/comment/:id', auth, commentController.getById);
+
+//news api call
+
+router.get('/news', newsController.getNews)
 
 module.exports=router

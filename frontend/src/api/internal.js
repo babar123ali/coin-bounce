@@ -8,6 +8,18 @@ const api = axios.create({
   },
 });
 
+export const getNews = async () => {
+  let response;
+
+  try {
+    response = await api.get('/news');
+   return  response = response.data.articles.slice(0, 15);
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};
+
 export const login = async (data) => {
   let response;
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getNews } from '../../api/external';
+import { getNews } from '../../api/internal';
 import styles from './Home.module.css';
 import Loader from '../../component/Loader/Loader';
 function Home() {
